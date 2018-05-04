@@ -40,6 +40,7 @@
     <hadoop.version>3.1.1-SNAPSHOT</hadoop.version>
     <jetty.version>9.3.22.v20171030</jetty.version>
     <netty.version>3.6.2.Final</netty.version>
+    <jackson.version>1.9.13</jackson.version>
     <pig.version>0.13.0</pig.version>
     <javac.version>1.8</javac.version>
     <slf4j.version>1.7.10</slf4j.version>
@@ -729,7 +730,33 @@
       <dependency>
         <groupId>com.sun.jersey</groupId>
         <artifactId>jersey-json</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
         <version>1.9</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-asl</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-xc</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-jaxrs</artifactId>
+        <version>${jackson.version}</version>
       </dependency>
       <dependency>
         <groupId>org.bouncycastle</groupId>
