@@ -18,7 +18,7 @@ AutoReq: no
 # HDP specific parameters
 %define hdp_version 2.6.1.0
 %define tez_src /root/tez
-%define tez_version 0.9.1
+%define tez_version 0.9.2-SNAPSHOT
 
 Name:          tez_2_6_1_0_129
 Version:       0.9.1.2.6.1.0
