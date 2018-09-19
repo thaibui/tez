@@ -275,7 +275,7 @@ public class DAGClientTimelineImpl extends DAGClientInternal {
         succeededTaskCount += taskStats.succeededTaskCount;
         killedTaskCount += taskStats.killedTaskCount;
         failedTaskCount += taskStats.failedTaskCount;
-        runningTaskCount += (taskStats.numTaskCount - taskStats.completedTaskCount);
+        runningTaskCount += (taskStats.numTaskCount - taskStats.completedTaskCount - taskStats.killedTaskCount);
       }
     }
 
